@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Scroll</title>
+    <style>
+        
+html, body, #main {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, input, textarea, select, button {
+    font-family: "Inter", sans-serif;
+    font-size: 12px;
+}
+* {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
+        body {
+            --token-0eb973f3-e9b2-45b7-ac24-411b1cb22cd9: rgb(255, 92, 184);
+			--token-66b5ce43-e357-4c61-b74d-672cf148c24b: rgba(255, 92, 184, 0.1);
+			--token-75c96519-c033-4721-9687-532e6378061c: rgb(255, 117, 26);
+			--token-58347cbe-128e-4494-8bfa-315942529cce: rgba(255, 117, 26, 0.1);
+			--token-836a1b9d-bb03-4d33-80b9-355ad52acd81: rgb(250, 250, 250);
+            background: rgba(255,255,255,1);
+        }
+        @font-face { src: url("https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF7g7J_950vCo.ttf"); font-family: "Montserrat"; font-style: normal; font-weight: 600 }
+		@font-face { src: url("https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-U1UpcaXcl0Aw.ttf"); font-family: "Open Sans"; font-style: normal; font-weight: 400 }
+		@font-face { src: url("https://fonts.gstatic.com/s/ptsanscaption/v13/0FlMVP6Hrxmt7-fsUFhlFXNIlpcqfQXwQy6yxg.ttf"); font-family: "PT Sans Caption"; font-style: normal; font-weight: 400 }
+		@font-face { src: url("https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsYCByxyKeuDp.ttf"); font-family: "PT Sans Narrow"; font-style: normal; font-weight: 400 }
+		@font-face { src: url("https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H7g7J_950vCo.ttf"); font-family: "Montserrat"; font-style: normal; font-weight: 800 }
+		@font-face { src: url("https://fonts.gstatic.com/s/racingsansone/v8/sykr-yRtm7EvTrXNxkv5jfKKyDCwL3rmWpIBtA.ttf"); font-family: "Racing Sans One"; font-style: normal; font-weight: 400 }
+		@font-face { src: url("https://fonts.gstatic.com/s/notosanssc/v12/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf"); font-family: "Noto Sans SC"; font-style: normal; font-weight: 400 }
+		@font-face { src: url("https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCPNLA3JC9c.ttf"); font-family: "Raleway"; font-style: normal; font-weight: 400 }
+        body :not(input):not(textarea):not([contenteditable="true"]) { -webkit-user-select: none; user-select: none; }
+		[data-framer-component-type="Text"], [data-framer-component-type="Text"] * { pointer-events: none !important; -webkit-user-select: none; user-select: none; }
+		[data-framer-component-type="Text"] a { pointer-events: auto !important; }
+		[data-framer-component-type="Frame"] { -webkit-user-select: none; user-select: none; }
+    </style>
+    <link href="https://app.framerstatic.com/inter.2MA4MR5E.css" rel="stylesheet">
+    <link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_bZF7g7J_950vCo.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/opensans/v23/mem8YaGs126MiZpBA-U1UpcaXcl0Aw.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/ptsanscaption/v13/0FlMVP6Hrxmt7-fsUFhlFXNIlpcqfQXwQy6yxg.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/ptsansnarrow/v12/BngRUXNadjH0qYEzV7ab-oWlsYCByxyKeuDp.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/montserrat/v18/JTURjIg1_i6t8kCHKm45_c5H7g7J_950vCo.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/racingsansone/v8/sykr-yRtm7EvTrXNxkv5jfKKyDCwL3rmWpIBtA.ttf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/notosanssc/v12/k3kXo84MPvpLmixcA63oeALhL4iJ-Q7m8w.otf" as="font" crossorigin>
+	<link rel="preload" href="https://fonts.gstatic.com/s/raleway/v22/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaooCPNLA3JC9c.ttf" as="font" crossorigin>
+</head>
+
+<body>
+    <div id="main"></div>
+
+    <script async src="https://ga.jspm.io/npm:es-module-shims@0.10.7/dist/es-module-shims.min.js"></script>
+
+    <script type="importmap">
+    {
+        "imports": {
+ "framer": "https://app.framerstatic.com/library.Q7C5YLXY.js",
+ "framer-motion": "https://app.framerstatic.com/framer-motion-esm-shim.26YGHNTG.js",
+ "react": "https://ga.jspm.io/npm:react@17.0.2/index.js",
+ "react-dom": "https://ga.jspm.io/npm:react-dom@17.0.2/index.js",
+ "react/jsx-runtime": "https://ga.jspm.io/npm:react@17.0.2/jsx-runtime.js",
+ "framer:screens/z8JuI8Tqi": "https://framerusercontent.com/modules/HrdxqAhEkemVajBdlVM0/924DBVoeNbu0MBXIDHIa/z8JuI8Tqi.js",
+ "framer:screens/m_3f2cdim": "https://framerusercontent.com/modules/NcWjpPGFCu5yfD7uQm1O/jI0EhUtfdnNVEOoWETLb/m_3f2cdim.js",
+ "framer:screens/nP5mdGZ8m": "https://framerusercontent.com/modules/cinBZz31t3AqfIjZXEmM/OwkPIvA5jNqe08JatSjd/nP5mdGZ8m.js",
+ "framer:screens/Cx77JXtno": "https://framerusercontent.com/modules/Y2eCGu7z6E5MVfqEyKJ4/ebRnk7uq0cwmbSBzJJiZ/Cx77JXtno.js",
+ "framer:screens/ZNw7cHrvO": "https://framerusercontent.com/modules/rMC57LghpsvOeFrRqefk/N3C24fxf3UAmIG6AXpvX/ZNw7cHrvO.js",
+ "framer:screens/FZFyhVups": "https://framerusercontent.com/modules/j3Vdzp3Wqx0syJFI6KXC/7t1tW2QPjYAvpeR5TwIx/FZFyhVups.js",
+ "framer:screens/AinMSjPs6": "https://framerusercontent.com/modules/W9lwmjET89ics1jWDYwr/rAqBUICeQ6mo19X20TNT/AinMSjPs6.js",
+ "framer:screens/x5v3OnhHV": "https://framerusercontent.com/modules/bz1DP3Pv8bgeoTXj14Cu/7WhapzPhiTeeteMGfR7a/x5v3OnhHV.js",
+ "framer:screens/Bzm7lqhlI": "https://framerusercontent.com/modules/PiLU6lc2jBPraiXPr1If/QsREYOWv07gm5G83e5nx/Bzm7lqhlI.js",
+ "framer:screens/P5CKh6awJ": "https://framerusercontent.com/modules/EcBwTIuCR03ty7N1SfkM/to0JrWVH8fRfVNrqGrTI/P5CKh6awJ.js"
+},
+        "scopes": {
+            "https://ga.jspm.io/": {
+                "object-assign": "https://ga.jspm.io/npm:object-assign@4.1.1/index.js",
+                "scheduler": "https://ga.jspm.io/npm:scheduler@0.20.2/index.js"
+            }
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as ReactDOM from "react-dom"
+
+        window.__framer_importFromPackage = (name) => () =>
+            React.createElement("div", {}, `Package component not supported: ${name}`)
+
+        ;(async () => {
+            window.React = await import("react")
+            window.Framer = await import("framer")
+
+            Framer.fontStore.enabled = false
+
+            const routes = {"z8JuI8Tqi": Framer.lazy(() => import("https://framerusercontent.com/modules/HrdxqAhEkemVajBdlVM0/924DBVoeNbu0MBXIDHIa/z8JuI8Tqi.js")), "m_3f2cdim": Framer.lazy(() => import("https://framerusercontent.com/modules/NcWjpPGFCu5yfD7uQm1O/jI0EhUtfdnNVEOoWETLb/m_3f2cdim.js")), "nP5mdGZ8m": Framer.lazy(() => import("https://framerusercontent.com/modules/cinBZz31t3AqfIjZXEmM/OwkPIvA5jNqe08JatSjd/nP5mdGZ8m.js")), "Cx77JXtno": Framer.lazy(() => import("https://framerusercontent.com/modules/Y2eCGu7z6E5MVfqEyKJ4/ebRnk7uq0cwmbSBzJJiZ/Cx77JXtno.js")), "ZNw7cHrvO": Framer.lazy(() => import("https://framerusercontent.com/modules/rMC57LghpsvOeFrRqefk/N3C24fxf3UAmIG6AXpvX/ZNw7cHrvO.js")), "FZFyhVups": Framer.lazy(() => import("https://framerusercontent.com/modules/j3Vdzp3Wqx0syJFI6KXC/7t1tW2QPjYAvpeR5TwIx/FZFyhVups.js")), "AinMSjPs6": Framer.lazy(() => import("https://framerusercontent.com/modules/W9lwmjET89ics1jWDYwr/rAqBUICeQ6mo19X20TNT/AinMSjPs6.js")), "x5v3OnhHV": Framer.lazy(() => import("https://framerusercontent.com/modules/bz1DP3Pv8bgeoTXj14Cu/7WhapzPhiTeeteMGfR7a/x5v3OnhHV.js")), "Bzm7lqhlI": Framer.lazy(() => import("https://framerusercontent.com/modules/PiLU6lc2jBPraiXPr1If/QsREYOWv07gm5G83e5nx/Bzm7lqhlI.js")), "P5CKh6awJ": Framer.lazy(() => import("https://framerusercontent.com/modules/EcBwTIuCR03ty7N1SfkM/to0JrWVH8fRfVNrqGrTI/P5CKh6awJ.js"))}
+            const paths = {}
+
+            const entryRouteId = "z8JuI8Tqi"
+            const pathname = window.location.pathname
+            const routeId = (pathname && pathname in paths)
+                ? paths[pathname]
+                : entryRouteId
+            const RootComponent = routes[routeId]
+
+            await RootComponent.preload()
+
+            Framer.MainLoop.start() // Required by DataObserver
+
+            ReactDOM.render(
+                React.createElement(
+                    Framer.DataObserver,
+                    {},
+                    React.createElement(
+                        Framer.NavigationRoutesContext.Provider,
+                        { value: routes },
+                        React.createElement(Framer.Navigation, {"withOverflowScrolling": false}, React.createElement(RootComponent, { key: routeId }))
+                    )
+                ),
+                document.getElementById("main")
+            )
+        })()
+    </script>
+</body>
+<html>
